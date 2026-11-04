@@ -1,5 +1,4 @@
-Nom : YIGO-Parguim | Telephone : 12345678 | Email : parguim123@gmail.com
-Nom : DA-Martin | Telephone : 12345678 | Email : martin@gmail.com
-Nom : MARE | Telephone : 56897790 | Email : mare@gmail.com
-Nom : SORE | Telephone : 23890987 | Email : sore@gmail.com
 Nom : NOMBO-W-Gontran | Telephone : 64362884 | Email : gontannombo@gmail.com
+Nom : SORE | Telephone : 23890987 | Email : sore@gmail.com
+Nom : MARE | Telephone : 56897790 | Email : mare@gmail.com
+Nom : YIGO-Parguim | Telephone : 12345678 | Email : parguim123@gmail.com

@@ -369,6 +369,6 @@ void validation_saisie(const char *msg, char* var, int taille){
     {
         printf("%s: ",msg);
         fgets(var,taille,stdin);
-        var[strcspn(var,"\r\n")] = '\0';        // netoyage de la chaine entré (supprimé le retour à la ligne)
+        var[strcspn(var,"\r\n")] = '\0';        // netoyage de la chaine entrée (supprimé le retour à la ligne)
     }while(strlen(var)==0);
 }
