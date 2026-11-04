@@ -10,6 +10,16 @@ void saisie(char *msg, char* var, int taille){
     }while(strlen(var)==0);
 }
 
+int est_vide(char* chaine){
+    unsigned int i;
+    for(i=0; chaine[i]!='\0'; i++){
+        if((chaine[i] >= 'a' && chaine[i]<='z') || (chaine[i] >= 'A' && chaine[i]<='Z')){
+            return 0;
+        }
+    }
+    return 1;
+}
+
 void traiter_nom(char *nom, char c1, char c2){
     char *c;
     for(int i=1; i<=strlen(nom); i++){
@@ -21,9 +31,10 @@ void traiter_nom(char *nom, char c1, char c2){
 
 int main()
 {
-    char nom[] = "NOMBO w Gontran";
-    traiter_nom(nom,' ','-');
-    printf("%s\n",nom);
+    char nom[50];
+    saisie("Nom",nom,50);
+    int r = est_vide(nom);
+    printf(" r = %d\n",r);
 
     return 0;
 }

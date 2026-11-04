@@ -92,6 +92,12 @@ int supprimer_contact(ListeContact **tete, char *telephone);
 */
 void liberer(ListeContact **tete);
 
+/* Rôle: vérifie si la chaine n'est pas vide (composer uniquement d'espace)
+ Paramètres :
+  - char* chaine : la chaine à vérifier
+*/
+int est_vide(char* chaine);
+
 /* Rôle : Validation de saisie: cette fonction empêche la saisie de champ vide
    Paramètres :
     -const char *msg : message à afficher à l'écran pour l'utilisateur
@@ -364,11 +370,22 @@ void liberer(ListeContact **tete){
     *tete = NULL;
 }
 
+int est_vide(char* chaine){
+    unsigned int i;
+    for(i=0; chaine[i]!='\0'; i++){
+        if(chaine[i] != ' '){
+            return 0;
+        }
+    }
+    return 1;
+}
+
 void validation_saisie(const char *msg, char* var, int taille){
     do
     {
         printf("%s: ",msg);
         fgets(var,taille,stdin);
         var[strcspn(var,"\r\n")] = '\0';        // netoyage de la chaine entrée (supprimé le retour à la ligne)
-    }while(strlen(var)==0);
+    }while(strlen(var)==0 || est_vide(var) == 1);
 }
+
